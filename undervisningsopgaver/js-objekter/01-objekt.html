@@ -12,13 +12,15 @@
 
     <div id="dyr">
 
-        <h3></h3>
+        <h3>Gris</h3>
 
-        <p id="type"></p>
+        <p id="navn">Navn: <br></p>
 
-        <img src="" alt="">
+        <p id="type">Type: <br></p>
 
-        <p id="levested"></p>
+        <img src="" alt="gris">
+
+        <p id="levested">Levested: <br></p>
 
 
     </div>
@@ -27,7 +29,7 @@
     <script>
         let dyr = {
 
-            "navn": "gris",
+            "navn": "Gris",
             "type": "pattedyr",
             "billede": "http://helf-kea.dk/test/gris.png",
             "levested": "svinefarm"
@@ -36,11 +38,12 @@
 
         let dest = document.querySelector("#dyr");
 
-        dest.querySelector("h3").textContent = dyr.navn;
-        dest.querySelector("#type").textContent = dyr.type;
+        dest.querySelector("#navn").textContent += dyr.navn;
+        dest.querySelector("#type").textContent += dyr.type;
         dest.querySelector("img").src = dyr.billede;
-        dest.querySelector("#levested").textContent = dyr.levested;
+        dest.querySelector("#levested").textContent += dyr.levested;
 
+        console.log(dyr);
     </script>
 </body>
 
